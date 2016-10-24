@@ -38,7 +38,18 @@ namespace tabuleiro
 				throw new TabuleiroException("Ja existe uma peca nesta posicao!");
 			}
 			pecas[pos.linha, pos.coluna] = p;
-			p.pos = pos;
+			p.posicao = pos;
+		}
+
+		public Peca retirarPeca(Posicao pos){
+			if (peca(pos) == null)
+			{
+				return null;
+			}
+			Peca aux = peca(pos);
+			aux.posicao  = null;
+			pecas[pos.linha, pos.coluna] = null;
+			return aux;
 		}
 
 
