@@ -36,6 +36,8 @@ namespace Xadrez
 						partida.validarPosicaoDeDestino(origem, destino);
 
 						partida.realizaJogada(origem, destino);
+
+
 					}
 					catch (TabuleiroException e)
 					{
@@ -43,6 +45,8 @@ namespace Xadrez
 						Console.ReadLine();
 					}
 				}
+				Console.Clear();
+				Tela.imprimirPartida(partida);
 			}
 			catch (TabuleiroException e)
 			{
